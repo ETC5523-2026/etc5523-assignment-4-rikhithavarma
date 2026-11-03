@@ -1,0 +1,134 @@
+# PopulationExplorer
+
+## Overview
+
+PopulationExplorer is an R package developed for ETC5523: Communicating
+with Data at Monash University.
+
+It provides an interactive Shiny application for exploring Australian
+state and territory population changes between 2010 and 2025.
+
+The application is intended for students and members of the public
+interested in Australian population trends.
+
+**Research question:** How have Australian state and territory
+populations changed between 2010 and 2025, and which areas experienced
+faster growth?
+
+## Features
+
+The Shiny application allows users to:
+
+- Select an Australian state or territory.
+- Choose a starting and ending year.
+- Explore annual population trends using an interactive selection and
+  line chart.
+- Calculate absolute and percentage population growth.
+- View a table of annual population estimates.
+- Read automatically generated interpretations of population changes.
+
+The application also provides explanatory information, data limitations
+and helpful messages for invalid year selections.
+
+## Data
+
+The package includes `population_tidy`, a dataset containing 128
+observations for Australia’s eight states and territories.
+
+The dataset contains three variables:
+
+- `year`: Calendar year, 2010–2025.
+- `state`: State or territory abbreviation.
+- `population`: Estimated resident population in persons.
+
+The original data were obtained from the Australian Bureau of Statistics
+(ABS), *National, state and territory population*, Table 4: Estimated
+Resident Population, States and Territories.
+
+Source:
+<https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population>
+
+The data were prepared by selecting June population estimates for
+2010–2025, retaining the eight states and territories and converting the
+spreadsheet into tidy format.
+
+The preparation script and original spreadsheet are included in the
+`data-raw` directory for reproducibility.
+
+ABS data are reused with attribution under the Creative Commons
+Attribution 4.0 International licence, subject to the ABS’s stated
+exclusions.
+
+Licence: <https://creativecommons.org/licenses/by/4.0/>
+
+## Installation
+
+Install the package from GitHub using:
+
+``` r
+install.packages("remotes")
+
+remotes::install_github(
+  "ETC5523-2026/etc5523-assignment-4-rikhithavarma"
+)
+```
+
+## Launch the Shiny app
+
+After installation:
+
+``` r
+library(PopulationExplorer)
+
+run_population_app()
+```
+
+The app opens in an RStudio Viewer or web browser.
+
+## Population growth function
+
+The package also provides an exported function for calculating
+population changes between two selected years.
+
+``` r
+library(PopulationExplorer)
+
+data("population_tidy", package = "PopulationExplorer")
+
+summarise_population(
+  population_tidy,
+  start_year = 2010,
+  end_year = 2025
+)
+```
+
+The function returns the starting population, ending population,
+absolute population change and percentage growth for each state or
+territory.
+
+## Interpreting the results
+
+Population change is the difference between population estimates at the
+beginning and the end.
+
+Percentage growth measures this difference relative to the starting
+population. It represents total growth over the selected period rather
+than an annual growth rate.
+
+The data are estimated resident populations, not exact counts. The
+application does not determine the causes of changes in populations such
+as migration, births or deaths.
+
+## Documentation website
+
+## AI-use declaration
+
+Generative AI tool, ChatGPT, was used to support the development of this
+assignment. Assistance included troubleshooting R and Shiny errors,
+suggesting code structure, improving documentation wording and checking
+implementation errors.
+
+The dataset selection, analysis, application development, testing and
+final submission were carried out and reviewed by me. AI-generated
+suggestions were checked and revised in RStudio before inclusion in the
+submitted package.. \`\`\`
