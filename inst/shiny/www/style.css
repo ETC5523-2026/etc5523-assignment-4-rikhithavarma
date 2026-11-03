@@ -1,0 +1,64 @@
+
+/* Australian Population Growth Explorer */
+/* ETC5523 Assignment 4 */
+
+/* Overall page */
+body {
+  background-color: #E6F4F3;
+  color: #243247;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Main content area */
+.container-fluid {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 25px 35px;
+  background-color: #F7FCFB;
+  border-radius: 10px;
+}
+
+/* Main title */
+h2 {
+  color: #16565D;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Section headings */
+h4 {
+  color: #117C83;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* Input labels */
+.control-label {
+  font-weight: 600;
+  color: #243247;
+}
+
+/* Tables */
+.table {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+/* Table headings */
+.table thead {
+  background-color: #D7EFED;
+  color: #16565D;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 14px;
+}
+
+/* Divider */
+hr {
+  border-top: 1px solid #dce5ee;
+  margin: 25px 0;
+}

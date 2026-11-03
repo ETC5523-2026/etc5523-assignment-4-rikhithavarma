@@ -6,10 +6,14 @@ Description: Provides annual population estimates for Australian states
     and territories from 2010 to 2025. Includes functions for
     summarising population growth and an interactive Shiny application
     for exploring population changes over time.
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-Imports: 
+Imports:
+    shiny,
     dplyr,
+    ggplot2,
+    scales
+Suggests:
     tidyr
 Config/roxygen2/version: 8.1.1
