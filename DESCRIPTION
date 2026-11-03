@@ -1,12 +1,15 @@
 Package: PopulationExplorer
 Title: Explore Australian State and Territory Population Growth
 Version: 0.0.1
-Authors@R: person("Rikhitha", "Varma", email = "rsmn0001@student.monash.edu", role = c("aut", "cre"))
+Authors@R: person("Rikhitha", "Varma", email = "rsmn0001@stude.monash.edu", role = c("aut", "cre"))
 Description: Provides annual population estimates for Australian states
     and territories from 2010 to 2025. Includes functions for
     summarising population growth and an interactive Shiny application
     for exploring population changes over time.
-License: MIT + file LICENSE
+License: MIT
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+Imports: 
+    dplyr,
+    tidyr
+Config/roxygen2/version: 8.1.1
