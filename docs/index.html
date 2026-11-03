@@ -54,6 +54,24 @@
 <div class="page-header"><h1 id="populationexplorer">PopulationExplorer<a class="anchor" aria-label="anchor" href="#populationexplorer"></a>
 </h1></div>
 <div class="section level2">
+<h2 id="quick-start-launch-the-interactive-dashboard">Quick start: Launch the interactive dashboard<a class="anchor" aria-label="anchor" href="#quick-start-launch-the-interactive-dashboard"></a>
+</h2>
+<p>The interactive PopulationExplorer Shiny dashboard is included in this R package.</p>
+<p>To install the package from GitHub and launch the dashboard, run the following commands in RStudio:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span></span>
+<span>  <span class="st">"ETC5523-2026/etc5523-assignment-4-rikhithavarma"</span>,</span>
+<span>  upgrade <span class="op">=</span> <span class="st">"never"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">PopulationExplorer</span><span class="fu">::</span><span class="fu"><a href="reference/run_population_app.html">run_population_app</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>The dashboard allows users to select an Australian state or territory and a year range between 2010 and 2025.</p>
+<p>The population trend chart, growth summary, interpretation and annual population table update automatically based on these selections.</p>
+<p><strong>Note:</strong> The interactive dashboard runs through R Shiny. The documentation website provides instructions and reference material, while the application itself launches locally through the installed package.</p>
+</div>
+<div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
 <p>PopulationExplorer is an R package developed for ETC5523: Communicating with Data at Monash University.</p>
@@ -99,7 +117,7 @@
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>Install the package from GitHub using:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span></span>
@@ -110,7 +128,7 @@
 <h2 id="launch-the-shiny-app">Launch the Shiny app<a class="anchor" aria-label="anchor" href="#launch-the-shiny-app"></a>
 </h2>
 <p>After installation:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">PopulationExplorer</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="reference/run_population_app.html">run_population_app</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
@@ -120,7 +138,7 @@
 <h2 id="population-growth-function">Population growth function<a class="anchor" aria-label="anchor" href="#population-growth-function"></a>
 </h2>
 <p>The package also provides an exported function for calculating population changes between two selected years.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">PopulationExplorer</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"population_tidy"</span>, package <span class="op">=</span> <span class="st">"PopulationExplorer"</span><span class="op">)</span></span>
@@ -142,12 +160,14 @@
 <div class="section level2">
 <h2 id="documentation-website">Documentation website<a class="anchor" aria-label="anchor" href="#documentation-website"></a>
 </h2>
+<p>The PopulationExplorer package documentation, function reference pages and user vignette are available at:</p>
+<p><a href="https://etc5523-2026.github.io/etc5523-assignment-4-rikhithavarma/" class="external-link uri">https://etc5523-2026.github.io/etc5523-assignment-4-rikhithavarma/</a></p>
 </div>
 <div class="section level2">
 <h2 id="ai-use-declaration">AI-use declaration<a class="anchor" aria-label="anchor" href="#ai-use-declaration"></a>
 </h2>
 <p>Generative AI tool, ChatGPT, was used to support the development of this assignment. Assistance included troubleshooting R and Shiny errors, suggesting code structure, improving documentation wording and checking implementation errors.</p>
-<p>The dataset selection, analysis, application development, testing and final submission were carried out and reviewed by me. AI-generated suggestions were checked and revised in RStudio before inclusion in the submitted package.. ```</p>
+<p>The dataset selection, analysis, application development, testing and final submission were carried out and reviewed by me. AI-generated suggestions were checked and revised in RStudio before inclusion in the submitted package.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="license">
