@@ -134,5 +134,5 @@ https://etc5523-2026.github.io/etc5523-assignment-4-rikhithavarma/
 
 Generative AI tool, ChatGPT, was used to support the development of this assignment. Assistance included troubleshooting R and Shiny errors, suggesting code structure, improving documentation wording and checking implementation errors.
 
-The dataset selection, analysis, application development, testing and final submission were carried out and reviewed by me. AI-generated suggestions were checked and revised in RStudio before inclusion in the submitted package..
+The dataset selection, analysis, application development, testing and final submission were carried out and reviewed by me. AI-generated suggestions were checked and revised in RStudio before inclusion in the submitted package.
 
