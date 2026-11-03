@@ -1,6 +1,31 @@
 
 # PopulationExplorer
 
+
+## Quick start: Launch the interactive dashboard
+
+The interactive PopulationExplorer Shiny dashboard is included in this R package.
+
+To install the package from GitHub and launch the dashboard, run the following commands in RStudio:
+
+```r
+install.packages("remotes")
+
+remotes::install_github(
+  "ETC5523-2026/etc5523-assignment-4-rikhithavarma",
+  upgrade = "never"
+)
+
+PopulationExplorer::run_population_app()
+```
+
+The dashboard allows users to select an Australian state or territory and a year range between 2010 and 2025.
+
+The population trend chart, growth summary, interpretation and annual population table update automatically based on these selections.
+
+**Note:** The interactive dashboard runs through R Shiny. The documentation website provides instructions and reference material, while the application itself launches locally through the installed package.
+
+
 ## Overview
 
 PopulationExplorer is an R package developed for ETC5523: Communicating with Data at Monash University.
