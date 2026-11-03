@@ -100,6 +100,9 @@ The data are estimated resident populations, not exact counts. The application d
 
 ## Documentation website
 
+The PopulationExplorer package documentation, function reference pages and user vignette are available at:
+
+https://etc5523-2026.github.io/etc5523-assignment-4-rikhithavarma/
 
 
 ## AI-use declaration

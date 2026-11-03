@@ -15,5 +15,8 @@ Imports:
     ggplot2,
     scales
 Suggests:
+    knitr,
+    rmarkdown,
     tidyr
 Config/roxygen2/version: 8.1.1
+VignetteBuilder: knitr

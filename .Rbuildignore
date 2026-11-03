@@ -2,3 +2,8 @@
 ^data-raw$
 ^etc5523-assignment-4-rikhithavarma\.Rproj$
 ^\.Rproj\.user$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^doc$
+^Meta$

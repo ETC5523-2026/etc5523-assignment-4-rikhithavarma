@@ -1,0 +1,134 @@
+
+---
+title: "Using PopulationExplorer"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using PopulationExplorer}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Introduction
+
+PopulationExplorer is an R package that helps students and members of the public explore changes in Australian state and territory populations.
+
+The main question is:
+
+**How have Australian state and territory populations changed between 2010 and 2025?**
+
+The package includes annual June estimated resident population data from the Australian Bureau of Statistics (ABS), a population growth summary function, and an interactive Shiny application.
+
+# Installation
+
+Install the package from GitHub using:
+
+```{r installation, eval=FALSE}
+install.packages("remotes")
+
+remotes::install_github(
+  "ETC5523-2026/etc5523-assignment-4-rikhithavarma"
+)
+```
+
+After installation, load the package:
+
+```{r load-package}
+library(PopulationExplorer)
+```
+
+# Exploring the data
+
+The package contains a dataset called `population_tidy`.
+
+It includes annual estimated resident population observations for Australia's eight states and territories from 2010 to 2025.
+
+The variables are:
+
+- `year`: Calendar year.
+- `state`: Australian state or territory abbreviation.
+- `population`: Estimated resident population, measured in persons.
+
+View the first six observations:
+
+```{r view-data}
+data("population_tidy", package = "PopulationExplorer")
+
+head(population_tidy)
+```
+
+# Calculating population growth
+
+The exported function `summarise_population()` compares population estimates between two selected years.
+
+For example, the following code compares 2015 and 2022:
+
+```{r growth-example}
+growth <- summarise_population(
+  population_tidy,
+  start_year = 2015,
+  end_year = 2022
+)
+
+growth
+```
+
+The output contains the starting population, ending population, absolute population change and percentage growth.
+
+For New South Wales, the population increased from 7,616,168 in 2015 to 8,182,098 in 2022.
+
+This represents an increase of 565,930 people, or 7.43% over the selected period.
+
+Percentage growth is calculated relative to the starting population. It does not represent an annual growth rate.
+
+# Launching the Shiny application
+
+Launch the app using:
+
+```{r launch-app, eval=FALSE}
+run_population_app()
+```
+
+The application opens in the RStudio Viewer or a web browser.
+
+# Using the interactive controls
+
+The app contains two main controls:
+
+1. **State or territory dropdown:** Select the state or territory to investigate.
+2. **Year-range slider:** Select the starting and ending years.
+
+The population trend chart, growth summary and annual data table automatically update when the selections change.
+
+For example, select NSW and set the year range to 2015–2022.
+
+The line chart shows how NSW's population changed during this period. The growth summary displays the corresponding absolute and percentage changes.
+
+# Interpreting the outputs
+
+The line chart displays estimated resident population over time.
+
+The growth summary compares population at the beginning and end of the selected period.
+
+For NSW between 2015 and 2022, the population increased by 565,930 people (7.43%).
+
+The annual population table allows users to examine individual yearly estimates.
+
+If the same starting and ending year are selected, the application displays an informative message because a population growth comparison requires two different years.
+
+# Limitations
+
+The ABS figures are estimated resident populations rather than exact population counts.
+
+The data do not establish the causes of population changes, such as migration, births or deaths.
+
+The analysis covers June 2010 to June 2025, so it does not describe later population changes.
+
+Population growth percentages depend on the selected starting and ending years.
+
+# Data source
+
+Australian Bureau of Statistics (ABS), *National, state and territory population*, Table 4: Estimated Resident Population, States and Territories.
+
+https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population
+
+ABS material is reused with attribution under Creative Commons Attribution 4.0 International, subject to applicable ABS exclusions.
